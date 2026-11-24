@@ -1,5 +1,19 @@
 # Переплёт
 
+[![Windows build](https://github.com/Abzac/pereplet/actions/workflows/windows-release.yml/badge.svg?branch=main)](https://github.com/Abzac/pereplet/actions/workflows/windows-release.yml)
+[![Release](https://img.shields.io/github/v/release/Abzac/pereplet?label=release)](https://github.com/Abzac/pereplet/releases/latest)
+[![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)](LICENSE)
+[![Frontend tests: 205 passed](https://img.shields.io/badge/frontend_tests-205_passed-brightgreen)](https://github.com/Abzac/pereplet/actions/runs/45383120411)
+[![Backend tests: 231 passed](https://img.shields.io/badge/backend_tests-231_passed-brightgreen)](https://github.com/Abzac/pereplet/actions/runs/45383120411)
+
+[![Windows x64](https://img.shields.io/badge/platform-Windows_x64-0078D4)](#начать-читать)
+[![Tauri 2](https://img.shields.io/badge/Tauri-2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app/)
+[![Svelte 5](https://img.shields.io/badge/Svelte-5-FF3E00?logo=svelte&logoColor=white)](https://svelte.dev/)
+[![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white)](https://www.rust-lang.org/)
+
+Число прошедших тестов указано для проверенной сборки 0.1.0. Бейдж CI показывает текущий статус проверок ветки main.
+
 **Личная библиотека для Windows с поддержкой книг, комиксов и чтения вслух.**
 
 Переплёт предназначен для организации коллекции и чтения электронных книг. В оформлении основной акцент сделан на содержимом книги, типографике и обложках. Приложение хранит файлы и настройки на вашем компьютере, сохраняет позицию чтения и поддерживает добавление книг из локальных файлов и OPDS-каталогов.
@@ -24,7 +38,7 @@
 
 ## Начать читать
 
-В разделе Releases доступны два варианта с одинаковым составом книг и компонентов:
+В разделе [Releases](https://github.com/Abzac/pereplet/releases/latest) доступны два варианта с одинаковым составом книг и компонентов:
 
 - **Установщик — Pereplet-Setup-Windows-x64.exe.** Запустите мастер установки, выберите папку и при необходимости создайте ярлык на рабочем столе. На последнем шаге можно сразу открыть приложение. Установка выполняется для текущего пользователя без прав администратора.
 - **Portable — Pereplet-Tauri-Windows-x64.zip.** Распакуйте весь архив в папку, доступную для записи, и запустите **Pereplet.exe**.
@@ -143,6 +157,10 @@ npm run build
 ```
 
 GitHub Actions **Windows distributions** собирает portable и установщик, проверяет оба варианта и сохраняет ZIP, EXE и их SHA-256 в Artifacts. Отправка тега `vX.Y.Z` запускает публикацию Release после успешных проверок. Ручной запуск workflow создаёт только артефакты. [Процедура выпуска](docs/RELEASING.md).
+
+## Что дальше
+
+Планируется поддержка **Linux** и **macOS**: готовые настольные сборки, локальное чтение вслух и проверка основных форматов книг и комиксов на каждой платформе. Сроки пока не определены; текущий выпуск предназначен для Windows x64.
 
 ## Лицензии
 
