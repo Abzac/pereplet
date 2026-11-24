@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Переплёт",
+  "version": "0.1.0",
+  "identifier": "app.pereplet.desktop",
+  "build": {"frontendDist": "../frontend/dist"},
+  "app": {
+    "windows": [],
+    "withGlobalTauri": true,
+    "security": {"capabilities": ["desktop"]}
+  },
+  "bundle": {"active": false, "icon": ["../app-icon.ico"]}
+}

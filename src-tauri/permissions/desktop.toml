@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "allow-desktop-lifecycle"
+description = "Allow the trusted local reader to manage its desktop lifecycle"
+commands.allow = ["desktop_ready", "minimize_window", "finish_close"]

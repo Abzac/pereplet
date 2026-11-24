@@ -1,0 +1,8 @@
+{
+  "name": "pereplet", "version": "0.1.0", "private": true, "license": "GPL-3.0-only", "type": "module",
+  "scripts": {"dev": "vite --host 127.0.0.1", "build": "vite build", "check": "svelte-check --tsconfig ./tsconfig.json"},
+  "dependencies": {"phosphor-svelte": "^3.0.1", "svelte": "^5.0.0"},
+  "devDependencies": {"@sveltejs/vite-plugin-svelte": "^6.0.0", "svelte-check": "^4.0.0", "typescript": "^5.8.3", "vite": "^7.0.0"}
+}
+
+

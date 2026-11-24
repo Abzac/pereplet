@@ -1,0 +1,223 @@
+{
+  "schema": 2,
+  "verified_at": "2026-11-24",
+  "engine": {
+    "package": "piper-tts",
+    "version": "1.8.0",
+    "source": "https://github.com/OHF-Voice/piper1-gpl",
+    "package_source": "https://pypi.org/project/piper-tts/1.8.0/",
+    "license": "GPL-3.0-or-later",
+    "runtime": "CPU, ONNX Runtime",
+    "tested_python": "3.12.14 (Windows x64)"
+  },
+  "capabilities": {
+    "offline_after_setup": true,
+    "speed_range": [
+      0.5,
+      2.0
+    ],
+    "volume": "browser audio control",
+    "pitch": false,
+    "highlight": "paragraph",
+    "word_timestamps": false,
+    "extra_stress_dictionary": false,
+    "voice_cloning": false,
+    "russian_yo": "optional, conservative length-preserving dictionary; no homograph disambiguation"
+  },
+  "runtime_limits": {
+    "max_characters_per_request": 6000,
+    "max_accepted_requests": 2,
+    "inference_processes": 1,
+    "request_timeout_seconds": 120,
+    "model_unload_idle_seconds": 180,
+    "audio_cache_max_bytes": 268435456
+  },
+  "default_voice": "ru_RU-dmitri-medium",
+  "voices": [
+    {
+      "id": "ru_RU-dmitri-medium",
+      "display_name": "Дмитрий",
+      "language": "ru-RU",
+      "sample_rate": 22050,
+      "repository": "https://huggingface.co/rhasspy/piper-voices",
+      "revision": "e5349433ed883a32f893a434dc43a6c66b95ef7c",
+      "repository_license_metadata": "MIT",
+      "dataset_license_in_model_card": "CC0",
+      "license_note": "The bundled revision uses the hifi_tts_92 base, not Lessac. Its dataset chain is CC0 and CC BY 4.0. Retain MODEL_CARD, BASE_MODEL_CARD and licenses/VOICE_ATTRIBUTION.md. Dataset terms are not represented as a separate license grant for model weights.",
+      "directory": "data/models/piper-ru-dmitri",
+      "files": [
+        {
+          "name": "ru_RU-dmitri-medium.onnx",
+          "bytes": 63221984,
+          "sha256": "9ed9941bac7373f2ec1be36627e0e71a349a59ca5522d4363fd50701db05193a",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/e5349433ed883a32f893a434dc43a6c66b95ef7c/ru/ru_RU/dmitri/medium/ru_RU-dmitri-medium.onnx"
+        },
+        {
+          "name": "ru_RU-dmitri-medium.onnx.json",
+          "bytes": 6197,
+          "sha256": "c3741c9c1558fc38e902fd80d39155c32a7d019d7d17e3a43eac66b7bd3fbe09",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/e5349433ed883a32f893a434dc43a6c66b95ef7c/ru/ru_RU/dmitri/medium/ru_RU-dmitri-medium.onnx.json"
+        },
+        {
+          "name": "MODEL_CARD",
+          "bytes": 454,
+          "sha256": "4da875aca6642bd96f0327705e874cbbcc44bc1790ee1d08b3fc0eb266523e5d",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/e5349433ed883a32f893a434dc43a6c66b95ef7c/ru/ru_RU/dmitri/medium/MODEL_CARD"
+        },
+        {
+          "name": "BASE_MODEL_CARD",
+          "bytes": 1422,
+          "sha256": "62cafa98605100626d876aadcfd3dfa961cac263fa338b1fe17fe0989545e700",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/e5349433ed883a32f893a434dc43a6c66b95ef7c/en/en_US/hifi_tts_92/medium/MODEL_CARD"
+        }
+      ],
+      "training_base": "en_US-hifi_tts_92-medium",
+      "training_chain_licenses": [
+        "CC0",
+        "CC-BY-4.0"
+      ]
+    },
+    {
+      "id": "ru_RU-denis-medium",
+      "display_name": "Денис",
+      "language": "ru-RU",
+      "sample_rate": 22050,
+      "repository": "https://huggingface.co/rhasspy/piper-voices",
+      "revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+      "repository_license_metadata": "MIT",
+      "dataset_license_in_model_card": "CC0",
+      "license_note": "Repository metadata and dataset labels are separate. The model card provides no separate detailed license grant for the weights. Retain upstream files; review before redistribution.",
+      "directory": "data/models/piper-ru-denis",
+      "files": [
+        {
+          "name": "ru_RU-denis-medium.onnx",
+          "bytes": 63201294,
+          "sha256": "15fab56e11a097858ee115545d0f697fc2a316c41a291a5362349fb870411b0a",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/denis/medium/ru_RU-denis-medium.onnx"
+        },
+        {
+          "name": "ru_RU-denis-medium.onnx.json",
+          "bytes": 4823,
+          "sha256": "831c860dac0b5073eaa81610a0a638ec23d90a6cf8e5f871b4485c2cec3767c8",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/denis/medium/ru_RU-denis-medium.onnx.json"
+        },
+        {
+          "name": "MODEL_CARD",
+          "bytes": 276,
+          "sha256": "8b5d685dd80f8ad3f8dbbe1c56b16bb0809f00c144af3642dbcf3b707eb89c12",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/denis/medium/MODEL_CARD"
+        },
+        {
+          "name": "UPSTREAM_README.md",
+          "bytes": 497,
+          "sha256": "33e93643fce5180886300f9f0070eeeab8af148efb8e84361f8904def80fd9fb",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/README.md"
+        }
+      ]
+    },
+    {
+      "id": "ru_RU-irina-medium",
+      "display_name": "Ирина",
+      "language": "ru-RU",
+      "sample_rate": 22050,
+      "repository": "https://huggingface.co/rhasspy/piper-voices",
+      "revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+      "repository_license_metadata": "MIT",
+      "dataset_license_in_model_card": "Unknown",
+      "license_note": "Repository metadata and dataset labels are separate. Irina's model card explicitly says the dataset license is Unknown. The model card provides no separate detailed license grant for the weights. Retain upstream files; review before redistribution.",
+      "directory": "data/models/piper-ru-irina",
+      "files": [
+        {
+          "name": "ru_RU-irina-medium.onnx",
+          "bytes": 63201294,
+          "sha256": "8ff38212d23da300bbe3705c645e6e5b9475f0bfde01558eb17813e22acaaaaa",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/irina/medium/ru_RU-irina-medium.onnx"
+        },
+        {
+          "name": "ru_RU-irina-medium.onnx.json",
+          "bytes": 4765,
+          "sha256": "c2ec28bb38e2b59e93b959b3e40348c1afebbd272f30fed5d41205d08e98a9d7",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/irina/medium/ru_RU-irina-medium.onnx.json"
+        },
+        {
+          "name": "MODEL_CARD",
+          "bytes": 271,
+          "sha256": "f4fc2deb0e8c6219f29202b8dd06c9638c5ffd50ad5c6b2c90cf1aa59d507593",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/irina/medium/MODEL_CARD"
+        },
+        {
+          "name": "UPSTREAM_README.md",
+          "bytes": 497,
+          "sha256": "33e93643fce5180886300f9f0070eeeab8af148efb8e84361f8904def80fd9fb",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/README.md"
+        }
+      ]
+    },
+    {
+      "id": "ru_RU-ruslan-medium",
+      "display_name": "Руслан",
+      "language": "ru-RU",
+      "sample_rate": 22050,
+      "optional": true,
+      "repository": "https://huggingface.co/rhasspy/piper-voices",
+      "revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+      "repository_license_metadata": "MIT",
+      "dataset_license_in_model_card": "CC BY-NC-SA 4.0",
+      "license_note": "Repository metadata and source dataset terms are separate. This entry records the model card; it is not a statement that all underlying materials share the repository license.",
+      "directory": "data/models/piper-ru-ruslan",
+      "files": [
+        {
+          "name": "ru_RU-ruslan-medium.onnx",
+          "bytes": 63201294,
+          "sha256": "72a5f88e0b20928064eb45d88e1daa21f8af62d18613580d32cbb4aed48dcf7f",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/ruslan/medium/ru_RU-ruslan-medium.onnx"
+        },
+        {
+          "name": "ru_RU-ruslan-medium.onnx.json",
+          "bytes": 4882,
+          "sha256": "706a4fb17bc304abd07809b552deae615e64dcbffbfbd09854ba37ca59e88117",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/ruslan/medium/ru_RU-ruslan-medium.onnx.json"
+        },
+        {
+          "name": "MODEL_CARD",
+          "bytes": 313,
+          "sha256": "28f5c0381c1234eb17bfd77e77f893b008948c29bc351fb811abd2d6a69e7662",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/ru/ru_RU/ruslan/medium/MODEL_CARD"
+        }
+      ]
+    },
+    {
+      "id": "en_US-lessac-medium",
+      "display_name": "Lessac",
+      "language": "en-US",
+      "sample_rate": 22050,
+      "optional": true,
+      "repository": "https://huggingface.co/rhasspy/piper-voices",
+      "revision": "5041a7a49ae5b3a0f30e6837769eb03fdbb231bd",
+      "repository_license_metadata": "MIT",
+      "dataset_license_in_model_card": "Blizzard 2013 research license (see MODEL_CARD)",
+      "license_note": "Repository metadata and source dataset terms are separate. This entry records the model card; it is not a statement that all underlying materials share the repository license.",
+      "directory": "data/models/piper-en-lessac",
+      "files": [
+        {
+          "name": "en_US-lessac-medium.onnx",
+          "bytes": 63201294,
+          "sha256": "5efe09e69902187827af646e1a6e9d269dee769f9877d17b16b1b46eeaaf019f",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/en/en_US/lessac/medium/en_US-lessac-medium.onnx"
+        },
+        {
+          "name": "en_US-lessac-medium.onnx.json",
+          "bytes": 4885,
+          "sha256": "efe19c417bed055f2d69908248c6ba650fa135bc868b0e6abb3da181dab690a0",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json"
+        },
+        {
+          "name": "MODEL_CARD",
+          "bytes": 351,
+          "sha256": "ce49eb457742208166d399a40cdec2c7fa9db77960930031564ab56f12882645",
+          "url": "https://huggingface.co/rhasspy/piper-voices/resolve/5041a7a49ae5b3a0f30e6837769eb03fdbb231bd/en/en_US/lessac/medium/MODEL_CARD"
+        }
+      ]
+    }
+  ]
+}

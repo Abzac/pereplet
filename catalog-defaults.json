@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "verified_at": "2026-11-24",
+  "catalogs": [
+    {
+      "key": "flibusta",
+      "name": "Flibusta",
+      "url": "http://flibusta.is/opds",
+      "aliases": [
+        "https://flibusta.is/opds"
+      ],
+      "languages": [
+        "ru",
+        "en"
+      ],
+      "source": "http://flibusta.is/opds"
+    },
+    {
+      "key": "coollib",
+      "name": "Coollib · русские книги",
+      "url": "https://coollib.com/opds",
+      "aliases": [
+        "http://coollib.com/opds"
+      ],
+      "languages": [
+        "ru"
+      ],
+      "source": "https://coollib.com/opds"
+    }
+  ],
+  "remove_known_urls": [
+    "https://wolnelektury.pl/opds/",
+    "http://wolnelektury.pl/opds/",
+    "https://www.wolnelektury.pl/opds/",
+    "http://www.wolnelektury.pl/opds/"
+  ]
+}

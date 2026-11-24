@@ -1,0 +1,8 @@
+/* Reserved chrome space is identical whether tools are visible or hidden. */
+.reader-shell>.reader-toolbar{height:56px;position:relative}
+.reader-shell>.reader-stage{padding-top:16px;padding-bottom:16px}
+.reader-shell .fullscreen-button.active{color:var(--gold)}
+.reader-autohide .toolbar-actions,.reader-autohide .back-library,.reader-autohide>.reader-footer>*,.reader-autohide .page-edge{transition:opacity .18s ease,visibility .18s}
+.reader-autohide:not(.reader-controls-visible) .toolbar-actions,.reader-autohide:not(.reader-controls-visible) .back-library,.reader-autohide:not(.reader-controls-visible)>.reader-footer>*,.reader-autohide:not(.reader-controls-visible) .page-edge{opacity:0;visibility:hidden;pointer-events:none}
+@media(max-height:800px){.reader-shell>.reader-toolbar{height:48px}.reader-shell>.reader-stage{padding-top:10px;padding-bottom:10px}}
+@media(prefers-reduced-motion:reduce){.reader-autohide *{transition:none!important}}

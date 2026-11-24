@@ -1,0 +1,7 @@
+/** Only reading appearance is per-book; voice, volume and library controls stay global. */
+export const appearanceKeys = new Set(['adaptiveWidth','autoHideTools','theme','font','fontSize','lineHeight','margin','width','spreadWidth','singleWidth','scrollWidth','layout','cover','texture','pageLayout','pageSingleWidth','pageSpreadWidth','pageScrollWidth','pageFit','pageCoverFirst','pageGap','pageEqualHeight']);
+export function usesGlobalAppearance(preferences:any):boolean {return preferences?.useGlobalAppearance!==false;}
+export function appearanceOf(settings:any):Record<string,any> {return Object.fromEntries(Object.entries(settings||{}).filter(([key])=>appearanceKeys.has(key)));}
+export function readerSettings(global:any,preferences:any):any {const defaults={pageLayout:'single',pageSingleWidth:900,pageSpreadWidth:1800,pageScrollWidth:900,pageFit:true,pageCoverFirst:global?.cover==='separate',pageGap:true,pageEqualHeight:false,...global};return usesGlobalAppearance(preferences)?defaults:{...defaults,...appearanceOf(preferences?.appearance)};}
+export function settingsOutsideAppearance(settings:any):Record<string,any> {return Object.fromEntries(Object.entries(settings||{}).filter(([key])=>!appearanceKeys.has(key)));}
+export function scopePreferences(preferences:any,global:boolean,current:any):any {return{...preferences,useGlobalAppearance:global,...(!global?{appearance:appearanceOf(preferences?.appearance||current)}:{})};}

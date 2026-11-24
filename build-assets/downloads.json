@@ -1,0 +1,47 @@
+{
+  "python": {
+    "name": "python-3.13.17-embed-amd64.zip",
+    "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-embed-amd64.zip",
+    "sha256": "9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38"
+  },
+  "webview2": {
+    "name": "WebView2-fixed-x64.cab",
+    "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/ecc2761e-1380-46ee-9552-995b039e4e47/Microsoft.WebView2.FixedVersionRuntime.158.0.4370.33.x64.cab",
+    "sha256": "835da387df67797f710881f553bb6934d98f24d08e370456f48d38ed4e072b62"
+  },
+  "piper_source": {
+    "name": "piper-v1.8.0.tar.gz",
+    "url": "https://codeload.github.com/OHF-Voice/piper1-gpl/tar.gz/refs/tags/v1.8.0",
+    "sha256": "0a22987a6157f14e2fb7cf4aa702b547467fd0448bea9f233abd503c3ff4a0e1"
+  },
+  "espeak_source": {
+    "name": "espeak-ng-724808c.tar.gz",
+    "url": "https://codeload.github.com/espeak-ng/espeak-ng/tar.gz/724808c",
+    "sha256": "26b71dc68bb364f7c2130bec4cacd223a9ece469662c40f1c5234e404590208d"
+  },
+  "mpl_cssparser": {
+    "name": "cssparser-0.37.0.crate",
+    "url": "https://static.crates.io/crates/cssparser/cssparser-0.37.0.crate",
+    "sha256": "8c9cdaae01d5ed7882b04d795e7f752f46ff52d2fa3b50a20d28c464510bba98"
+  },
+  "mpl_cssparser_macros": {
+    "name": "cssparser-macros-0.7.1.crate",
+    "url": "https://static.crates.io/crates/cssparser-macros/cssparser-macros-0.7.1.crate",
+    "sha256": "d045de693cb712d0b22c6a64be5b953f67b3ce00ab5ad3dd5d8b441886ab8e1a"
+  },
+  "mpl_dtoa_short": {
+    "name": "dtoa-short-0.3.5.crate",
+    "url": "https://static.crates.io/crates/dtoa-short/dtoa-short-0.3.5.crate",
+    "sha256": "cd1511a7b6a56299bd043a9c167a6d2bfb37bf84a6dfceaba651168adfb43c87"
+  },
+  "mpl_option_ext": {
+    "name": "option-ext-0.2.0.crate",
+    "url": "https://static.crates.io/crates/option-ext/option-ext-0.2.0.crate",
+    "sha256": "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d"
+  },
+  "mpl_selectors": {
+    "name": "selectors-0.38.0.crate",
+    "url": "https://static.crates.io/crates/selectors/selectors-0.38.0.crate",
+    "sha256": "8adfa1c298912827b8a28b223b3b874357397ae706e6190acd9bf28cee99114d"
+  }
+}

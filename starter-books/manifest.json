@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "books": [
+    {
+      "id": "reader-guide",
+      "title": "Переплёт. Руководство читателя",
+      "author": "Переплёт",
+      "year": "2026",
+      "file": "reader-guide.fb2",
+      "sha256": "2650fe02247b3deee58dfe47186ea7a4a246654de163601f537a7d54b948377d",
+      "source": "../docs/USER_GUIDE.md",
+      "series": "Ваш Переплёт"
+    },
+    {
+      "id": "white-nights",
+      "title": "Белые ночи",
+      "author": "Фёдор Михайлович Достоевский",
+      "year": "1848",
+      "file": "white-nights.fb2",
+      "sha256": "b5868b0926f0f078a3f948de44a18a02fa2b22ed7c964a4a713eff431c37dfa6",
+      "source": "https://thelib.ru/books/dostoevskiy_fedor_mihaylovich/belye_nochi.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "dead-souls",
+      "title": "Мёртвые души. Том первый",
+      "author": "Николай Васильевич Гоголь",
+      "year": "1842",
+      "file": "dead-souls.fb2",
+      "sha256": "a49f8c2dd569264fd6de77eda27f3098ae08734d53a0406e7627df7d88a8e3b6",
+      "source": "https://thelib.ru/books/gogol_nikolay_vasilevich/mertvye_dushi.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "oblomov",
+      "title": "Обломов",
+      "author": "Иван Александрович Гончаров",
+      "year": "1859",
+      "file": "oblomov.fb2",
+      "sha256": "3fd32f22f5ebf96f2799e49cb750e525e016d504cf579311b875961890a9ab6b",
+      "source": "https://thelib.ru/books/goncharov_ivan_aleksandrovich/oblomov.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "garnet-bracelet",
+      "title": "Гранатовый браслет",
+      "author": "Александр Иванович Куприн",
+      "year": "1911",
+      "file": "garnet-bracelet.fb2",
+      "sha256": "a05f70d945ac2153a814ddafa494195369a6416b65da7cdf04ea1a9af999098a",
+      "source": "https://thelib.ru/books/kuprin_aleksandr/granatoviy_braslet.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "fathers-sons",
+      "title": "Отцы и дети",
+      "author": "Иван Сергеевич Тургенев",
+      "year": "1862",
+      "file": "fathers-sons.fb2",
+      "sha256": "7399a02d3f3de0e68b690bc7d85cca165c9d1841d3d1c265303f9c2b503cd1c1",
+      "source": "https://thelib.ru/books/turgenev_ivan_sergeevich/otcy_i_deti.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "captains-daughter",
+      "title": "Капитанская дочка",
+      "author": "Александр Сергеевич Пушкин",
+      "year": "1836",
+      "file": "captains-daughter.fb2",
+      "sha256": "d7ee310b956a0c3c70deb0b5a5915bd90b4124562934edd5d18ae61aad9a964b",
+      "source": "https://thelib.ru/books/pushkin_aleksandr/kapitanskaya_dochka.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "ward-six",
+      "title": "Палата № 6",
+      "author": "Антон Павлович Чехов",
+      "year": "1892",
+      "file": "ward-six.fb2",
+      "sha256": "8a0b06bc1bf05c6d36e2217ac01eec921205adae6f6c5210c6ef1c6f3992c85c",
+      "source": "https://thelib.ru/books/chehov_anton_pavlovich/palata_6.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "lady-dog",
+      "title": "Дама с собачкой",
+      "author": "Антон Павлович Чехов",
+      "year": "1899",
+      "file": "lady-dog.fb2",
+      "sha256": "9c8f4bcff9c34a45efc923df4222d52597afb59eb88ee2b7758077cc9521d1c4",
+      "source": "https://thelib.ru/books/chehov_a_p/dama_s_sobachkoy.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "hero-time",
+      "title": "Герой нашего времени",
+      "author": "Михаил Юрьевич Лермонтов",
+      "year": "1840",
+      "file": "hero-time.fb2",
+      "sha256": "bbc03d5c77f691469882203b80d6015dbd633c43e7b125000dbed3e07d4b6f1d",
+      "source": "https://thelib.ru/books/lermontov_mihail/geroy_nashego_vremeni.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "history-town",
+      "title": "История одного города",
+      "author": "Михаил Евграфович Салтыков-Щедрин",
+      "year": "1870",
+      "file": "history-town.fb2",
+      "sha256": "7d10cb3b4a11caa7df94224fe9391192f70ef7531440d091f4d5c9c6e42cf306",
+      "source": "https://thelib.ru/books/saltykov_schedrin_mihail_evgrafovich/istoriya_odnogo_goroda.html",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "lefty",
+      "title": "Левша",
+      "author": "Николай Семёнович Лесков",
+      "year": "1881",
+      "file": "lefty.fb2",
+      "sha256": "de5d50aa9f75e4a6e3c320337b33d427b3e04d9b7464e1ca9b5333443b915a20",
+      "source": "https://www.aibookfree.ru/books/levsha/",
+      "series": "Вечная классика"
+    },
+    {
+      "id": "lower-depths",
+      "title": "На дне",
+      "author": "Максим Горький",
+      "year": "1902",
+      "file": "lower-depths.fb2",
+      "sha256": "9aa962071ad6d746f3918ed416782341116647afabeff63cac633c64b7173902",
+      "source": "https://thelib.ru/books/gorkiy_maksim/na_dne.html",
+      "series": "Вечная классика"
+    }
+  ]
+}
