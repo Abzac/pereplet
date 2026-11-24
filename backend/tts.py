@@ -247,17 +247,18 @@ def model_ready(voice_id: str = VOICE_ID) -> tuple[bool, str]:
     config = voice.path.with_suffix(".onnx.json")
     try:
         stat = voice.path.stat()
-        config_stat = config.stat()
-        key = (str(voice.path), voice.model_sha256, voice.config_sha256, stat.st_size, stat.st_mtime_ns, config_stat.st_size, config_stat.st_mtime_ns)
+        key = (str(voice.path), voice.model_sha256, stat.st_size, stat.st_mtime_ns)
         with _integrity_lock:
             previous = _integrity_cache.get(voice_id)
             if previous is None or previous[0] != key:
                 with voice.path.open("rb") as model_file:
                     model_ok = hashlib.file_digest(model_file, "sha256").hexdigest() == voice.model_sha256
-                with config.open("rb") as config_file:
-                    config_ok = hashlib.file_digest(config_file, "sha256").hexdigest() == voice.config_sha256
-                _integrity_cache[voice_id] = (key, model_ok and config_ok)
-            integrity_ok = _integrity_cache[voice_id][1]
+                _integrity_cache[voice_id] = (key, model_ok)
+            # The small JSON can change within one Windows filesystem clock tick.
+            # Hash it every time; only the large ONNX benefits from caching.
+            with config.open("rb") as config_file:
+                config_ok = hashlib.file_digest(config_file, "sha256").hexdigest() == voice.config_sha256
+            integrity_ok = _integrity_cache[voice_id][1] and config_ok
     except OSError:
         return False, f"Голос {voice.name} ещё не загружен. Нажмите «Скачать ещё голоса» и выберите голос."
     return (integrity_ok, f"Готов к чтению. {voice.name}, локально на CPU." if integrity_ok else f"Проверка голоса {voice.name} не пройдена. Скачайте этот голос повторно через «Скачать ещё голоса».")

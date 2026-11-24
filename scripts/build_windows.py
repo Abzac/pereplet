@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / 'build'
 OUT = BUILD / 'Pereplet-Tauri-Windows-x64'
 SOURCE_DIRS = ('backend', 'frontend', 'tests', 'src-tauri', 'scripts', 'docs', 'licenses', 'vendor', 'build-assets', '.github', 'starter-books')
-SOURCE_FILES = ('README.md', 'LICENSE', 'LICENSE-EXCEPTIONS.md', '.gitignore', 'rust-toolchain.toml', 'desktop_server.py', 'runner.py', 'launch.py', 'seed_demo.py', 'setup.ps1', 'setup-tts.ps1', 'Start Pereplet.cmd', 'Start Pereplet.vbs', 'Stop Pereplet.cmd', 'update_catalogs.py', 'app-icon.ico', 'model-manifest.json', 'catalog-defaults.json', 'requirements.txt', 'requirements-tts.txt', 'requirements-portable.txt', 'DEPENDENCIES.json', 'THIRD_PARTY_NOTICES.md')
+SOURCE_FILES = ('README.md', 'LICENSE', 'LICENSE-EXCEPTIONS.md', '.gitignore', '.gitattributes', 'rust-toolchain.toml', 'desktop_server.py', 'runner.py', 'launch.py', 'seed_demo.py', 'setup.ps1', 'setup-tts.ps1', 'Start Pereplet.cmd', 'Start Pereplet.vbs', 'Stop Pereplet.cmd', 'update_catalogs.py', 'app-icon.ico', 'model-manifest.json', 'catalog-defaults.json', 'requirements.txt', 'requirements-tts.txt', 'requirements-portable.txt', 'DEPENDENCIES.json', 'THIRD_PARTY_NOTICES.md')
 IGNORE = shutil.ignore_patterns('node_modules', 'target', 'gen', 'dist', '__pycache__', '.pytest_cache', '.git', 'data', '*.pyc', '*.log')
 
 def sha256(path):
@@ -162,4 +162,5 @@ def main():
     print(f'Built {archive.name}: {archive.stat().st_size:,} bytes; no user data')
 
 if __name__ == '__main__': main()
+
 

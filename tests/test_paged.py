@@ -113,7 +113,7 @@ class PagedTests(unittest.TestCase):
         first = paged.render_page(self.root, meta, 0, 1000)
         with patch.object(paged, "_pdf_image", side_effect=AssertionError("cache should be used")):
             self.assertEqual(paged.render_page(self.root, meta, 0, 1200), first)
-        with patch.object(paged, "MAX_CACHE_FILES", 2):
+        with patch.object(paged, "MAX_CACHE_FILES", 2), patch.object(paged.time, "time_ns", return_value=paged.time.time_ns()):
             second = paged.render_page(self.root, meta, 1, 800)
             paged.render_page(self.root, meta, 0, 1000)  # keep page zero recent
             third = paged.render_page(self.root, meta, 2, 800)

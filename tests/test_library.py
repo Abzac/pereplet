@@ -201,7 +201,7 @@ class LibraryTests(unittest.TestCase):
         self.assertTrue(all(b["chapter_count"] >= 3 for b in books))
         catalogs = library.list_catalogs()
         default_catalogs = load_manifest()["catalogs"]
-        self.assertEqual(len(catalogs), 4)
+        self.assertEqual(len(catalogs), len(default_catalogs))
         self.assertEqual({canonical_catalog_url(c["url"]) for c in catalogs},
                          {canonical_catalog_url(c["url"]) for c in default_catalogs})
         self.assertFalse(any("wolnelektury.pl" in c["url"] for c in catalogs))

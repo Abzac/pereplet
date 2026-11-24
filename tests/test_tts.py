@@ -2,6 +2,7 @@ import array
 from pathlib import Path
 import hashlib
 import io
+import os
 import wave
 from dataclasses import replace
 
@@ -42,7 +43,9 @@ def test_model_and_configuration_integrity(monkeypatch, tmp_path, voice_id):
     monkeypatch.setattr(tts, "_integrity_cache", {})
     monkeypatch.setattr(tts.importlib.util, "find_spec", lambda _: object())
     assert tts.model_ready(voice_id)[0]
+    old_stat = config.stat()
     config.write_bytes(b"changed configuration")
+    os.utime(config, ns=(old_stat.st_atime_ns, old_stat.st_mtime_ns))
     assert not tts.model_ready(voice_id)[0]
 
 

@@ -11,6 +11,7 @@ import math
 import os
 import re
 import threading
+import time
 import uuid
 import warnings
 import zipfile
@@ -37,6 +38,7 @@ MANIFEST = "paged-manifest.json"
 # PDFium must never be called concurrently, even for different documents.
 # Serializing the small CBZ render jobs also bounds peak decoded-image memory.
 _render_lock = threading.RLock()
+_cache_clock_ns = 0
 
 
 def _pdfium():
@@ -298,6 +300,14 @@ def _managed_child(root: Path, name: str) -> Path:
     return child
 
 
+def _touch_cache(path: Path) -> None:
+    # Called under _render_lock. Rapid accesses can share a Windows clock tick;
+    # give each access a distinct persisted timestamp to keep eviction ordered.
+    global _cache_clock_ns
+    _cache_clock_ns = max(time.time_ns(), _cache_clock_ns + 1_000_000)
+    os.utime(path, ns=(_cache_clock_ns, _cache_clock_ns))
+
+
 def _prune_cache(cache: Path, keep: Path) -> None:
     files = [item for item in cache.glob("v1-p*-w*.png") if item.is_file() and not item.is_symlink()]
     sizes = {item: item.stat().st_size for item in files}
@@ -339,7 +349,7 @@ def render_page(book_dir: Path, metadata: dict, page_index: int, width: int = 16
     output = _managed_child(cache, f"v1-p{page_index:05d}-w{width}.png")
     with _render_lock:
         if output.is_file():
-            os.utime(output, None)
+            _touch_cache(output)
             _prune_cache(cache, output)
             return output
         manifest_path = _managed_child(root, MANIFEST)
@@ -369,5 +379,6 @@ def render_page(book_dir: Path, metadata: dict, page_index: int, width: int = 16
         finally:
             image.close()
             temporary.unlink(missing_ok=True)
+        _touch_cache(output)
         _prune_cache(cache, output)
         return output

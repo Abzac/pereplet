@@ -1,0 +1,3 @@
+# Preserve the exact bytes used by the starter-book and license manifests.
+starter-books/*.fb2 -text
+licenses/supplemental/* -text
